@@ -1,9 +1,6 @@
 <?php $render('header');?>
 
 
-<a href="<?=$base?>/registrar">Registrar Usuarios</a>
-
-
 
 <h2>Usuarios Cadastrados</h2>
 

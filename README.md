@@ -31,3 +31,80 @@ class Usuario extends Model {
 
 }
 ```
+## Modelo do Banco de Dados
+
+```sql
+
+DROP TABLE IF EXISTS `usuarios`;
+
+CREATE TABLE `usuarios` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `nome` varchar(255) NOT NULL,
+  `email` varchar(250) NOT NULL,
+  `data_nascimento` date NOT NULL,
+  `cidade` varchar(255) NOT NULL,
+  `senha` varchar(255) NOT NULL,
+  `saldo` decimal(10,2) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `email` (`email`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
+DROP TABLE IF EXISTS `categoria`;
+
+CREATE TABLE `categoria` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `nome` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
+DROP TABLE IF EXISTS `ganhos`;
+
+CREATE TABLE `ganhos` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `valor` decimal(10,2) NOT NULL,
+  `data` date NOT NULL,
+  `descricao` text NOT NULL,
+  `usuario_id` int NOT NULL,
+  `categoria_id` int NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+DROP TABLE IF EXISTS `gastos`;
+
+CREATE TABLE `gastos` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `valor` decimal(10,2) NOT NULL,
+  `data` date NOT NULL,
+  `descricao` text NOT NULL,
+  `usuario_id` int NOT NULL,
+  `categoria_id` int NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```

@@ -15,5 +15,6 @@
         <input type="submit" value="ENTRAR">
 </form>
 
+    <a href="<?=$base?>/registrar">Registrar Usuario</a>
 
 <?php $render('footer'); ?>
