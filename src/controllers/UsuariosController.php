@@ -11,6 +11,8 @@ class UsuariosController extends Controller {
     public function register(){
         $this->render('register');
     }
+
+    
     public function registerAction(){
         $nome = filter_input(INPUT_POST, 'nome');
         $email = filter_input(INPUT_POST, 'email');

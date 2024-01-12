@@ -5,8 +5,12 @@ $router = new Router();
 
 
 
-//Pag Inicial
+//Pag Inicial / Login
 $router->get('/', 'HomeController@index');
+$router->post('/login', 'HomeController@loginAction');
+
+//Pag após o login
+$router->get('/home', 'HomeController@home');
 
 //Registro de usuario
 $router->get('/registrar','UsuariosController@register');

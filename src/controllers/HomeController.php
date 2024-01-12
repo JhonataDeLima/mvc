@@ -6,9 +6,35 @@ use \src\models\Usuario;
 
 class HomeController extends Controller {
 
+    public function index(){
+        
+        $this->render('login');
+
+    }
+
+    public function loginAction(){
+
+        $email = filter_input(INPUT_POST, 'email');
+        $senha = filter_input(INPUT_POST, 'senha');
+
+        $usuarios = Usuario::select()->where('email', $email)->one();
+       
+       if($usuarios['email']===$email && $usuarios['senha']===$senha ){
+           
+            $this->redirect('/home');
+
+        }else{
+            
+            $this->redirect('/index');
+        }
 
 
-    public function index() {
+    }
+
+
+
+
+    public function home() {
         $usuarios = Usuario::select()->execute();
 
         $this->render('home', [
@@ -21,20 +47,6 @@ class HomeController extends Controller {
 
     public function sobre() {
 
-        
-      /*  $email = 'galego-tp@hotmail.com';
-        $senha = '162943';
-
-        $usuarios = Usuario::select()->where('email', $email)->one();
-        print_r($usuarios);
-       if($usuarios['email']===$email && $usuarios['senha']===$senha ){
-       echo 'voce entrou';
-        }else{
-            echo 'usuario ou senha incorreto';
-        }
-
-        $this->render('sobre'); */
-        
         $this->render('sobre');
         
     } 

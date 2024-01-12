@@ -1,4 +1,8 @@
-<form method="POST" action="<?=$base;?>/home/">
+<?php $render('header'); ?>
+
+
+
+<form method="POST" action="<?=$base;?>/login">
     <label>
         <h3>Email:</h3>
         <input type="text" name="email">
@@ -10,3 +14,6 @@
     </label>
         <input type="submit" value="ENTRAR">
 </form>
+
+
+<?php $render('footer'); ?>
