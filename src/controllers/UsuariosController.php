@@ -56,12 +56,12 @@ class UsuariosController extends Controller {
         
         $dup = Usuario::select()->where('id', $args['id'])->one();
 
-        /*if($email != $dup['email']){   
+        if($email != $dup['email']){   
             $data = Usuario::select()->where('email', $email)->execute();
             if(count($data) > 0)
                 $this->redirect('/usuario/'.$args['id'].'/editar');
              
-        }*/
+        }
 
 
         //atualizando dados
