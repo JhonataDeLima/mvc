@@ -1,5 +1,4 @@
 <?php $render('header'); ?>
-
 <h2>Editar Usuario</h2>
 
 <form method="POST" action="<?=$base;?>/usuario/<?=$usuarios['id'];?>/editar">
@@ -14,18 +13,6 @@
     <span>E-mail</span>
     </br>
     <input type="email" name="email" value="<?=$usuarios['email'];?>"/>
-    </br>
-</label>
-<label>
-    <span>Cidade</span>
-    </br>
-    <input type="text" name="cidade" value="<?=$usuarios['cidade'];?>" />
-    </br>
-</label>
-<label>
-    <span>Data de Nascimento</span>
-    </br>
-    <input type="date" name="dataNascimento" value="<?=$usuarios['data_nascimento'];?>" />
     </br>
 </label>
 <label>

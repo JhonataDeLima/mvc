@@ -5,10 +5,10 @@ $router = new Router();
 
 
 
-//Pag Inicial / Login
+//Pag Inicial / Login /logOut
 $router->get('/', 'HomeController@index');
 $router->post('/login', 'HomeController@loginAction');
-
+$router->post('/logout', 'HomeController@logOut');
 //Pag após o login
 $router->get('/home', 'HomeController@home');
 

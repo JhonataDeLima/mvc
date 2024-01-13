@@ -18,18 +18,6 @@
     </br>
 </label>
 <label>
-    <span>Cidade</span>
-    </br>
-    <input type="text" name="cidade" />
-    </br>
-</label>
-<label>
-    <span>Data de Nascimento</span>
-    </br>
-    <input type="date" name="dataNascimento" />
-    </br>
-</label>
-<label>
     <span>Senha</span>
     </br>
     <input type="password" name="senha" />

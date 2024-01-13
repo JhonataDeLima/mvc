@@ -1,7 +1,6 @@
 <?php $render('header'); ?>
 
 
-
 <form method="POST" action="<?=$base;?>/login">
     <label>
         <h3>Email:</h3>

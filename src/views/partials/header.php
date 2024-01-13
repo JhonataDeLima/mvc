@@ -1,9 +1,9 @@
 <html>
 <head>
-    <title>Projeto CRUD MVC</title>
+    <title>Welcome</title>
 </head>
 <body>
 <header>
-    <h1>Projeto: Gestao de Ganhos e Gastos para Motoristas de Aplicativos</h1>
+    <h1>Projeto CRUD MVC</h1>
     <hr/>
 </header>

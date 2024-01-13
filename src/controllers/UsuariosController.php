@@ -16,20 +16,16 @@ class UsuariosController extends Controller {
     public function registerAction(){
         $nome = filter_input(INPUT_POST, 'nome');
         $email = filter_input(INPUT_POST, 'email');
-        $cidade = filter_input(INPUT_POST, 'cidade');
-        $dataNascimento = filter_input(INPUT_POST, 'dataNascimento');
         $senha = filter_input(INPUT_POST, 'senha');
 
-        if ($nome && $email && $cidade && $dataNascimento && $senha){
-
+        if ($nome && $email && $senha){
+            //verifica se o email já está em uso
             $data = Usuario::select()->where('email', $email)->execute();
 
             if(count($data) === 0) {
                 Usuario::insert([
                     'nome' => $nome,
                     'email' => $email,
-                    'cidade' => $cidade,
-                    'data_nascimento' => $dataNascimento,
                     'senha' => $senha
                 ])->execute();
                 $this->redirect('/');
@@ -54,22 +50,19 @@ class UsuariosController extends Controller {
     public function editAction($args){
         $nome = filter_input(INPUT_POST, 'nome');
         $email = filter_input(INPUT_POST, 'email');
-        $cidade = filter_input(INPUT_POST, 'cidade');
-        $dataNascimento = filter_input(INPUT_POST, 'dataNascimento');
         $senha = filter_input(INPUT_POST, 'senha');
 
-        //verificar se o email já está sendo usado -------------------
+        //verifica se o email já está em uso
         $data = Usuario::select()->where('email', $email)->execute();
+
         if(count($data)>0){
             $this->redirect('/usuario/'.$args['id'].'/editar');
         }
-        //atualizando dados ------------------------------------------
-        if ($nome && $email && $cidade && $dataNascimento && $senha){
+        //atualizando dados
+        if ($nome && $email && $senha){
             Usuario::update()
             ->set('nome', $nome)
             ->set('email', $email)
-            ->set('cidade', $cidade)
-            ->set('data_nascimento', $dataNascimento)
             ->set('senha', $senha)
             ->where('id', $args['id'])
             ->execute();
