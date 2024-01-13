@@ -28,4 +28,5 @@
 </form>
 
 </br></br>
+<a href="<?=$base?>/">Voltar</a>
 <?php $render('footer'); ?>

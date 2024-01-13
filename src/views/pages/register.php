@@ -1,6 +1,4 @@
 <?php $render('header'); ?>
-
-
 <h2>Registro de Usuarios</h2>
 
 <form method="POST" action="<?=$base;?>/registrar">
@@ -26,10 +24,9 @@
 
 <input type="submit" value="Registrar" />
 </form>
-<form method="POST"  action="<?=$base;?>/">
-    <input type="submit" value="Voltar"/>
-</form>
 
+
+<a href="<?=$base?>/">Voltar</a>
 
 </br></br>
 <?php $render('footer'); ?>

@@ -29,4 +29,6 @@
 </form>
 
 </br></br>
+
+<a href="<?=$base?>/registrar">Adicionar Usuario</a>
 <?php $render('footer'); ?>
