@@ -25,7 +25,7 @@
     </br></br>
 </label>
 
-<input type="submit" value="Salvar altresções" />
+<input type="submit" value="Salvar alterações" />
 
 
 </form>

@@ -40,14 +40,22 @@ class UsuariosController extends Controller {
 
 //Editar/Atualizar Usuario ---------------------------------------------------------
     public function edit($args){
+
+
+        //verifica se está logado
+        if(!isset($_SESSION['id_usuario'])){
+            $this->redirect('/index');
+        }
         $usuarios = Usuario::select()->where('id', $args['id'])->one();
         
         $this->render('edit',[
             'usuarios' => $usuarios
         ]);
+        
     }
 
     public function editAction($args){
+
         $nome = filter_input(INPUT_POST, 'nome');
         $email = filter_input(INPUT_POST, 'email');
         $senha = filter_input(INPUT_POST, 'senha');

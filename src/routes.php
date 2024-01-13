@@ -28,3 +28,4 @@ $router->get('/usuario/{id}/excluir', 'UsuariosController@del');
 
 $router->get('/sobre/{nome}', 'HomeController@sobreP');
 $router->get('/sobre', 'HomeController@sobre');
+
