@@ -1,0 +1,58 @@
+.main {
+    padding:0px;
+    margin:0px;
+    width:100%;
+}
+header {
+    padding-top:5px;
+    width:100%;
+    text-align:center;
+}
+body {
+    font-family:Helvetica;
+    font-size:13px;
+}
+
+table {
+    margin-top:20px;
+}
+
+table th {
+    padding:10px;
+    background-color:#999;
+}
+
+table tr td {
+    padding:10px;
+
+}
+
+table tr:hover td {
+    background-color:#EEE;
+}
+
+
+.outer-form {
+    text-align:center;
+    height:300px;
+}
+.inner-form {
+    background-color:#bdbcbc;
+    border:2px solid black;
+    margin: 0 auto;
+    height:300px;
+    width:300px;
+}
+
+form {
+    text-align:center;
+}
+
+footer {
+    text-align:center;
+}
+
+.rodape {
+    width:100%;
+    text-align:center;
+}

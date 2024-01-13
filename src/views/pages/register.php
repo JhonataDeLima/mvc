@@ -1,4 +1,8 @@
 <?php $render('header'); ?>
+
+
+<div class="outer-form">
+<div class="inner-form">
 <h2>Registro de Usuarios</h2>
 
 <form method="POST" action="<?=$base;?>/registrar">
@@ -29,4 +33,6 @@
 <a href="<?=$base?>/">Voltar</a>
 
 </br></br>
+</div>
+</div>
 <?php $render('footer'); ?>

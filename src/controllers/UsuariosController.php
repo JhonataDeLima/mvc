@@ -53,11 +53,17 @@ class UsuariosController extends Controller {
         $senha = filter_input(INPUT_POST, 'senha');
 
         //verifica se o email já está em uso
-        $data = Usuario::select()->where('email', $email)->execute();
+        
+        $dup = Usuario::select()->where('id', $args['id'])->one();
 
-        if(count($data)>0){
-            $this->redirect('/usuario/'.$args['id'].'/editar');
-        }
+        /*if($email != $dup['email']){   
+            $data = Usuario::select()->where('email', $email)->execute();
+            if(count($data) > 0)
+                $this->redirect('/usuario/'.$args['id'].'/editar');
+             
+        }*/
+
+
         //atualizando dados
         if ($nome && $email && $senha){
             Usuario::update()

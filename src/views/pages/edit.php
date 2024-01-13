@@ -1,4 +1,7 @@
 <?php $render('header'); ?>
+
+<div class="outer-form">
+<div class="inner-form">
 <h2>Editar Usuario</h2>
 
 <form method="POST" action="<?=$base;?>/usuario/<?=$usuarios['id'];?>/editar">
@@ -29,4 +32,6 @@
 
 </br></br>
 <a href="<?=$base?>/">Voltar</a>
+</div>
+</div>
 <?php $render('footer'); ?>
