@@ -74,10 +74,7 @@ class UsuariosController extends Controller {
             $this->redirect('/usuario/'.$args['id'].'/editar');
     }
 
-
-//-----------------------------------------------------------------------------------
-
-//Deletar / Excluir Usuario ---------------------------------------------------------
+//Deletar Usuario -----------------------------------------------------------------------
     public function del($args){
         Usuario::delete()->where('id', $args)->execute();
         $this->redirect('/');
@@ -85,5 +82,3 @@ class UsuariosController extends Controller {
     }
 
 }
-
-//------------------------------------------------------------------------------------

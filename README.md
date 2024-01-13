@@ -1,3 +1,13 @@
+## Sobre
+
+O projeto consiste em um sistema simples de **CRUD** em **MVC**
+foi elaborado pelo professor Bonieky lacerda da b7web.com.br/
+para me desafiar impus o requisito de adicionar uma pagina de login com validação
+confesso que me deu um pouco de trabalho e tive que rever algumas aulas e pesquisar 
+assuntos que já haviam fugido da memoria. contudo consegui finalizar o desafio e
+estou muito satisfeito com o resultado. acredito que estou melhorando a cada dia.
+
+
 ## Instalação
 Você pode clonar este repositório OU baixar o .zip
 
