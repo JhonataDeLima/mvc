@@ -4,9 +4,9 @@ use core\Router;
 $router = new Router();
 
 
-
 //Pag Inicial / Login /logOut
 $router->get('/', 'HomeController@index');
+$router->post('/', 'HomeController@index');
 $router->post('/login', 'HomeController@loginAction');
 $router->post('/logout', 'HomeController@logOut');
 //Pag após o login

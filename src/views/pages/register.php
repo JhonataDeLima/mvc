@@ -25,8 +25,11 @@
 </label>
 
 <input type="submit" value="Registrar" />
-
 </form>
+<form method="POST"  action="<?=$base;?>/">
+    <input type="submit" value="Voltar"/>
+</form>
+
 
 </br></br>
 <?php $render('footer'); ?>
